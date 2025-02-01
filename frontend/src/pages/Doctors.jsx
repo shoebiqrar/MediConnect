@@ -8,8 +8,10 @@ const Doctor = () => {
 
   const {speciality} = useParams() // useparams is used to extract the speciality from url when someone reach  to example doctors/physician then it will extract the physician from Url   
   const [filterDoc, setFilterDoc] = useState([])
-  const {doctors} = useContext(AppContext);
+  const [showFilter,setShowFilter] = useState(false);
 
+
+  const {doctors} = useContext(AppContext);
   const applyFilter = () => {
      if(speciality) {
        setFilterDoc(doctors.filter(doc => doc.speciality === speciality))
@@ -27,7 +29,8 @@ const Doctor = () => {
     <div>
       <p className='text-grey-600'>Browse through the doctors specialist</p>
       <div className='flex flex-col sm:flex-row items-start gap-5 mt-5'>
-        <div className=' flex flex-col gap-4 text-sm text-gray-600'>
+        <button className={`py-1 px-3 border rounded text-sm transition-all sm:hidden ${showFilter ? 'bg-primary text-white': ''}`} onClick={()=>setShowFilter(prev=> !prev)}>Filters</button>
+        <div className={`flex flex-col gap-4 text-sm text-gray-600 ${showFilter ? 'flex' : 'hidden sm:flex'}`}>
           <p onClick={() =>speciality === 'General physician'? navigate('/doctors'): navigate('/doctors/General physician')} className={`w-[94vw] sm:w-auto pl-3 py-1.5 pr-16 border border-gray-300 rounded transition-all cursor-pointer ${speciality === "General Physician" ? "bg-indigo-100 text-black": ""}`}>General Physician</p>
           <p onClick={() =>speciality === 'Gynecologist'? navigate('/doctors'): navigate('/doctors/Gynecologist')} className={`w-[94vw] sm:w-auto pl-3 py-1.5 pr-16 border border-gray-300 rounded transition-all cursor-pointer`} className={`w-[94vw] sm:w-auto pl-3 py-1.5 pr-16 border border-gray-300 rounded transition-all cursor-pointer ${speciality === "Gynecologist" ? "bg-indigo-100 text-black": ""}`}>Gynecologists</p>
           <p onClick={() =>speciality === 'Dermatologist'? navigate('/doctors'): navigate('/doctors/Dermatologist')} className={`w-[94vw] sm:w-auto pl-3 py-1.5 pr-16 border border-gray-300 rounded transition-all cursor-pointer`} className={`w-[94vw] sm:w-auto pl-3 py-1.5 pr-16 border border-gray-300 rounded transition-all cursor-pointer ${speciality === "Dermatologist" ? "bg-indigo-100 text-black": ""}`}>Dermatologist</p>
