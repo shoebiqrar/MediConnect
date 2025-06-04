@@ -1,14 +1,14 @@
-frontend/.env
-backend/.env
-admin/.env
+# Ignore environment variables
+**/.env
+**/.env.*
 
-# Ignore virtual environments
-venv/
-.env/
+# Ignore dependencies
+**/node_modules/
 
-# Ignore Jupyter Notebook checkpoints
-.ipynb_checkpoints/
+# Ignore build folders
+**/build/
+**/dist/
 
 # Ignore system files
 .DS_Store
-Thumbs.db".env" 
+Thumbs.db
