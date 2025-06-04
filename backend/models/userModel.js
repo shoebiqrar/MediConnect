@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const userSchmea = new mongoose.Schema({
+const userSchema = new mongoose.Schema({
        name: {type:String, required:true},
        email: {type:String, required:true, unique:true},
        password: {type:String, required:true},
@@ -11,6 +11,6 @@ const userSchmea = new mongoose.Schema({
        phone: {type:String, default:'000000000'}
 })
 // we use url in image, this url contain image base 64 format
-const userModel = mongoose.models.user || mongoose.model('user',userSchmea)
+const userModel = mongoose.model('user',userSchema)
 
 export default userModel
