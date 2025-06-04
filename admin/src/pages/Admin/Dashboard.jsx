@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useContext, useEffect } from 'react'
 import { AdminContext } from '../../context/AdminContext'
 import { assets } from '../../assets/assets'
@@ -79,3 +80,14 @@ const Dashboard = () => {
 }
 
 export default Dashboard
+=======
+import React from 'react'
+
+const Dashboard = () => {
+  return (
+    <div>Dashboard</div>
+  )
+}
+
+export default Dashboard
+>>>>>>> d6b3eced8a5a1a0b4c95a379cd564575809c0a4c

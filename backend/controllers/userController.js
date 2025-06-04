@@ -2,10 +2,14 @@ import validator from 'validator'
 import bcrypt from 'bcrypt'
 import userModel from '../models/userModel.js'
 import  jwt  from 'jsonwebtoken'
+<<<<<<< HEAD
 import { v2 as cloudinary } from 'cloudinary'
 import doctorModel from '../models/doctorModel.js'
 import appointmentModel from '../models/appointmentModel.js'
  import razorpay from 'razorpay'
+=======
+
+>>>>>>> d6b3eced8a5a1a0b4c95a379cd564575809c0a4c
 
 // API to register user
 const registerUser = async (req,res) => {
@@ -44,11 +48,16 @@ const registerUser = async (req,res) => {
        res.json({success:true, token})
 
           
+<<<<<<< HEAD
+=======
+
+>>>>>>> d6b3eced8a5a1a0b4c95a379cd564575809c0a4c
     } catch (error) {
         console.log(error)
         res.json({success:false, message:error.message})
     }
 }
+<<<<<<< HEAD
 
 // API for user login
 const loginUser = async (req,res) => {
@@ -280,3 +289,6 @@ const updateProfile = async (req,res) => {
  } 
 
 export {registerUser,loginUser,getProfile,updateProfile,bookAppointment,listAppointment, cancelAppointment, paymentRazorpay,verifyRazorpay}
+=======
+export {registerUser}
+>>>>>>> d6b3eced8a5a1a0b4c95a379cd564575809c0a4c

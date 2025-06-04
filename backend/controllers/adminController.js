@@ -4,8 +4,11 @@ import bcrypt from "bcrypt"
 import { v2 as cloudinary } from "cloudinary"
 import doctorModel from "../models/doctorModel.js"
 import  jwt  from "jsonwebtoken"
+<<<<<<< HEAD
 import appointmentModel from "../models/appointmentModel.js"
 import userModel from "../models/userModel.js"
+=======
+>>>>>>> d6b3eced8a5a1a0b4c95a379cd564575809c0a4c
 //API for adding doctor 
 const addDoctor = async (req,res) => {
     try {
@@ -91,6 +94,7 @@ const addDoctor = async (req,res) => {
       }
     }
 
+<<<<<<< HEAD
     // Api to get all appointment list
     const appointmentsAdmin = async (req, res) => {
        try {
@@ -156,3 +160,6 @@ const addDoctor = async (req,res) => {
 
  
 export {addDoctor,loginAdmin, allDoctors, appointmentsAdmin, appointmentCancel, adminDashboard}
+=======
+export {addDoctor,loginAdmin, allDoctors}
+>>>>>>> d6b3eced8a5a1a0b4c95a379cd564575809c0a4c

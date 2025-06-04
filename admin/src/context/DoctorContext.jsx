@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import axios from "axios";
 import { createContext } from "react";
 import {useState } from 'react'
@@ -93,6 +94,17 @@ const DoctorContextProvider = (props) => {
         profileData,getProfileData, setProfileData,
     }
 
+=======
+import { createContext } from "react";
+
+export const  DoctorContext = createContext()
+
+const DoctorContextProvider = (props) => {
+     
+    const value = {
+        
+    }
+>>>>>>> d6b3eced8a5a1a0b4c95a379cd564575809c0a4c
     return (
         <DoctorContext.Provider value={value}>
             {props.children}

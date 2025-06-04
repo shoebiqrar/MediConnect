@@ -54,7 +54,16 @@ const Navbar = () => {
                   <p onClick={() => navigate('/my-appointments')} className='hover:text-black cursor-pointer'>My Appointments</p>
                   <p onClick={logout} className='hover:text-black cursor-pointer'>Logout</p>
                 </div>
+<<<<<<< HEAD
               </div>
+=======
+                <ul className='flex flex-col items-center gap-2 mt-5 px-5 text-lg font-medium'>
+                    <navlink  onClick={()=>setShowMenu(false)} to='/'><p className='px-4 py-2 rounded inline-block'>Home</p></navlink>
+                    <navlink  onClick={()=>setShowMenu(false)} to='/doctors'><p className='px-4 py-2 rounded inline-block'>All DOCTORS</p></navlink>
+                    <navlink  onClick={()=>setShowMenu(false)} to='/about'><p className='px-4 py-2 rounded inline-block'>ABOUT</p></navlink>
+                    <navlink  onClick={()=>setShowMenu(false)} to='contact'><p className='px-4 py-2 rounded inline-block'>CONTACT</p></navlink>
+                </ul>
+>>>>>>> d6b3eced8a5a1a0b4c95a379cd564575809c0a4c
             </div>
             : <button onClick={() => navigate('/login')} className='bg-primary text-white px-8 py-3 rounded-full font-light hidden md:block'>Create Account</button>
         }

@@ -1,4 +1,5 @@
 import doctorModel from "../models/doctorModel.js"
+<<<<<<< HEAD
 import bcrypt from 'bcrypt'
 import jwt from 'jsonwebtoken'
 import appointmentModel from "../models/appointmentModel.js"
@@ -173,3 +174,34 @@ const updateDoctorProfile = async (req, res) => {
 }
 
 export { changeAvailability, doctorList, loginDoctor, appointmentsDoctor, appointmentCancel, appointmentComplete, doctorDashboard, doctorProfile, updateDoctorProfile }
+=======
+
+
+
+const changeAvailability = async (req,res) => {
+    try {
+        const {docId} = req.body
+
+        const docData = await doctorModel.findById(docId)
+        await doctorModel.findByIdAndUpdate(docId,{available: !docData.available })
+        res.json({success:true,  message:'Availability Changed'})
+    } catch (error) {
+        console.log(error)
+        res.json({success:false,message:error.message})
+    }
+}
+
+const doctorList = async (req,res) => {
+     try {
+        const doctors = await doctorModel.find({}).select('-password','-email')  // .select is used to exlude the password and email.
+        res.json({success:true, doctors})
+     } catch (error) {
+        console.log(error)
+        res.json({success:false,message:error.message})
+     }
+}
+
+
+
+export {changeAvailability,doctorList}
+>>>>>>> d6b3eced8a5a1a0b4c95a379cd564575809c0a4c

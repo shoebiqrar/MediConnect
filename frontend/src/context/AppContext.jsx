@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { createContext, useEffect } from "react";
+=======
+import { createContext } from "react";
+>>>>>>> d6b3eced8a5a1a0b4c95a379cd564575809c0a4c
 import axios from "axios";
 import { useState } from "react";
 import { toast } from "react-toastify";
@@ -8,6 +12,7 @@ export const AppContext = createContext()
 const AppContextProvider = (props) => {
    
     const currencySymbol = '$'
+<<<<<<< HEAD
     const backendUrl = import.meta.env.VITE_BACKEND_URL
 
     const [doctors,setDoctors] = useState([])
@@ -27,6 +32,13 @@ const AppContextProvider = (props) => {
             console.log(error);
             toast.error(error.message);
         }
+=======
+    const backendUrl = import.meta.url.VITE_BACKEND_URL
+    const [doctors,setDoctors] = useState([])
+
+    const value = {
+        doctors, currencySymbol,getDoctorsData
+>>>>>>> d6b3eced8a5a1a0b4c95a379cd564575809c0a4c
     }
     
     const loadUserProfileData = async () => {
@@ -58,6 +70,22 @@ const AppContextProvider = (props) => {
         setUserData(false);
        }
     },[token])
+
+    const getDoctorsData = async () => {
+        try {
+            const {data} = await axios.get(backendUrl + '/api/doctor/list')
+            if(data.success) {
+               setDoctors(data.doctors)
+            }
+            else {
+                toast.error(data.message)
+            }
+        } catch (error) {
+            console.log(error);
+            toast.error(error.message);
+        }
+    }    
+
 
     return (
         <AppContext.Provider value={value}>

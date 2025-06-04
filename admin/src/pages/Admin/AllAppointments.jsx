@@ -1,4 +1,5 @@
 import React from 'react'
+<<<<<<< HEAD
 import { useContext } from 'react'
 import { AdminContext } from '../../context/AdminContext'
 import { useEffect } from 'react'
@@ -54,6 +55,12 @@ const AllAppointments = () => {
 
       </div>
     </div>
+=======
+
+const AllAppointments = () => {
+  return (
+    <div>AllAppointments</div>
+>>>>>>> d6b3eced8a5a1a0b4c95a379cd564575809c0a4c
   )
 }
 

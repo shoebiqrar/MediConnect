@@ -4,6 +4,7 @@ export const  AppContext = createContext()
 
 const AppContextProvider = (props) => {
      
+<<<<<<< HEAD
          const currency = '$'
 
     const calculateAge = (dob)=> {
@@ -29,6 +30,11 @@ const AppContextProvider = (props) => {
          currency
     }
 
+=======
+    const value = {
+        
+    }
+>>>>>>> d6b3eced8a5a1a0b4c95a379cd564575809c0a4c
     return (
         <AppContext.Provider value={value}>
             {props.children}
@@ -36,4 +42,8 @@ const AppContextProvider = (props) => {
     )
 }
 
+<<<<<<< HEAD
 export default AppContextProvider 
+=======
+export default AppContextProvider
+>>>>>>> d6b3eced8a5a1a0b4c95a379cd564575809c0a4c

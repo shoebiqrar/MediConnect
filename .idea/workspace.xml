@@ -16,12 +16,18 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< HEAD
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
+=======
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7
+}]]></component>
+>>>>>>> d6b3eced8a5a1a0b4c95a379cd564575809c0a4c
   <component name="ProjectId" id="2sJISyXXTEag0krOm5IMHJdNEU5" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -29,8 +35,12 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+<<<<<<< HEAD
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "Rebasing remove-env-files"
+=======
+    "RunOnceActivity.ShowReadmeOnStart": "true"
+>>>>>>> d6b3eced8a5a1a0b4c95a379cd564575809c0a4c
   }
 }]]></component>
   <component name="SharedIndexes">
